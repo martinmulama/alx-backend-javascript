@@ -162,3 +162,79 @@ Notes:
 
     console.log(greeting); // Outputs: "Hello, John!"
     ```
+- In ES6, you can create objects and define their properties using the object literal syntax.
+    ```javascript
+    let name = "John";
+    let age = 30;
+
+    let person = {
+        name,
+        age,
+        greet() {
+            console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+        }
+    };
+
+    person.greet(); // Outputs: "Hello, my name is John and I am 30 years old."
+    ```
+- You can create a function that takes parameters and returns a new object.
+    ```javascript
+    function createPerson(name, age) {
+        return {
+            name,
+            age,
+            greet() {
+                console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+            }
+        };
+    }
+
+    let person = createPerson("John", 30);
+    person.greet(); // Outputs: "Hello, my name is John and I am 30 years old."
+    ```
+- You can iterate over the keys and values of an object in JavaScript using `Object.keys()` and `Array.prototype.forEach()`.
+    ```javascript
+    let person = {
+        name: "John",
+        age: 30
+    };
+
+    Object.keys(person).forEach(key => {
+        let value = person[key];
+        console.log(`Key: ${key}, Value: ${value}`);
+    });
+    ```
+- You can check if an object has a specific property in JavaScript using `hasOwnProperty()` or the `in` operator.
+    ```javascript
+    let person = {
+        name: "John",
+        age: 30
+    };
+
+    console.log(person.hasOwnProperty('name')); // Outputs: true
+    console.log('name' in person); // Outputs: true
+    console.log(person.hasOwnProperty('address')); // Outputs: false
+    console.log('address' in person); // Outputs: false
+    ```
+- You can check the installed version of Node.js by running the `node --version` command in PowerShell.
+    ```powershell
+    node --version
+    ```
+- Initialize a new npm project:
+    ```bash
+    npm init -y
+    ```
+- Install Jest, Babel, and ESLint as dev dependencies:
+    ```bash
+    npm install --save-dev jest @babel/core @babel/preset-env eslint
+    ```
+- Create a `.babelrc` file with the following configuration:
+    ```json
+    {
+        "presets": ["@babel/preset-env"]
+    }
+    ```
+- Initialize ESLint:
+    ```bash
+    npx eslint --init
+    ```
