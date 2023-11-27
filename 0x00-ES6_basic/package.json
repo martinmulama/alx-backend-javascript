@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "dev": "node"
+    "dev": "node",
+    "lint": "eslint --fix"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,8 @@
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
     "eslint": "^8.54.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0",
     "jest": "^29.7.0"
   }
 }
