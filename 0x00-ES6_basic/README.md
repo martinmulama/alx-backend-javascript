@@ -29,4 +29,136 @@ Notes:
     }
     // Outputs: 1, 2, 3, 4
     ```
+- The `Map` object in ES6 holds key-value pairs and remembers the original insertion order of the keys.
+    ```javascript
+    let map = new Map();
+    map.set('name', 'John');
+    map.set('age', 30);
 
+    for (let [key, value] of map) {
+        console.log(`${key} = ${value}`);
+    }
+    // Outputs: "name = John", "age = 30"
+    ```
+- The `Set` object in ES6 lets you store unique values of any type, whether primitive values or object references.
+    ```javascript
+    let set = new Set();
+    set.add(1);
+    set.add(2);
+    set.add(3);
+    set.add(2); // This will not be added as 2 is already in the set
+
+    for (let value of set) {
+        console.log(value);
+    }
+    // Outputs: 1, 2, 3
+    ```
+- Classes in ES6 are a template for creating objects. They encapsulate data with code to manipulate that data.
+    ```javascript
+    class Rectangle {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+
+        area() {
+            return this.height * this.width;
+        }
+    }
+
+    const rectangle = new Rectangle(5, 8);
+    console.log(rectangle.area()); // Outputs: 40
+    ```
+- A `Promise` in ES6 is an object representing the eventual completion or failure of an asynchronous operation.
+    ```javascript
+    let promise = new Promise(function(resolve, reject) {
+        setTimeout(() => resolve("Promise resolved"), 1000);
+    });
+
+    promise.then(alert);
+    ```
+- `Symbol` in ES6 is a primitive data type. Each newly created symbol value has a unique identifier.
+    ```javascript
+    let sym1 = Symbol();
+    let sym2 = Symbol('key'); // optional string key
+
+    let obj = {
+        [sym1]: "value"
+    };
+
+    console.log(obj[sym1]); // Outputs: "value"
+    ```
+- Default function parameters in ES6 allow named parameters to be initialized with default values if no value or undefined is passed.
+    ```javascript
+    function greet(name = "World") {
+        return `Hello, ${name}!`;
+    }
+
+    console.log(greet()); // Outputs: "Hello, World!"
+    console.log(greet("User")); // Outputs: "Hello, User!"
+    ```
+- The rest parameter syntax in ES6 allows us to represent an indefinite number of arguments as an array.
+    ```javascript
+    function sum(...args) {
+        return args.reduce((previous, current) => {
+            return previous + current;
+        });
+    }
+
+    console.log(sum(1, 2, 3, 4)); // Outputs: 10
+    ```
+- The `includes()` method in ES6 determines whether one string may be found within another string.
+    ```javascript
+    let str = "Hello, world!";
+    console.log(str.includes("world")); // Outputs: true
+    console.log(str.includes("goodbye")); // Outputs: false
+    ```
+- The `startsWith()` method in ES6 determines whether a string begins with the characters of a specified string.
+    ```javascript
+    let str = "Hello, world!";
+    console.log(str.startsWith("Hello")); // Outputs: true
+    console.log(str.startsWith("world")); // Outputs: false
+    ```
+- The `endsWith()` method in ES6 determines whether a string ends with the characters of a specified string.
+    ```javascript
+    let str = "Hello, world!";
+    console.log(str.endsWith("world!")); // Outputs: true
+    console.log(str.endsWith("Hello")); // Outputs: false
+    ```
+- The `Array.from()` method in ES6 creates a new, shallow-copied Array instance from an array-like or iterable object. In the following example, Array.from() method is used to create a new array from a set object.
+    ```javascript
+    let set = new Set(['foo', 'bar', 'baz', 'foo']);
+    let array = Array.from(set);
+
+    console.log(array); // Outputs: ["foo", "bar", "baz"]
+    ```
+- The `Array.prototype.keys()` method in ES6 returns a new Array Iterator object that contains the keys for each index in the array.
+    ```javascript
+    let array = ['a', 'b', 'c'];
+    let iterator = array.keys();
+
+    for (let key of iterator) {
+        console.log(key); // Outputs: 0, 1, 2
+    }
+    ```
+- The `Array.prototype.find()` method in ES6 returns the first element in the array that satisfies the provided testing function.
+    ```javascript
+    let array = [5, 12, 8, 130, 44];
+    let found = array.find(element => element > 10);
+
+    console.log(found); // Outputs: 12
+    ```
+- The `Array.prototype.findIndex()` method in ES6 returns the index of the first element in the array that satisfies the provided testing function.
+    ```javascript
+    let array = [5, 12, 8, 130, 44];
+    let foundIndex = array.findIndex(element => element > 10);
+
+    console.log(foundIndex); // Outputs: 1
+    ```
+- Template literals (Template strings) in ES6 are string literals allowing embedded expressions.
+    ```javascript
+    let name = "John";
+    let greeting = `Hello, ${name}!`;
+
+    console.log(greeting); // Outputs: "Hello, John!"
+    ```
