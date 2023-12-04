@@ -1,6 +1,6 @@
 # JavaScript Functions and Concepts Recap
 
-This README provides a summary of JavaScript functions and concepts covered in a conversation with the OpenAI GPT-3.5 model.
+This README provides a summary of JavaScript functions and concepts.
 
 ## Functions
 
@@ -89,6 +89,4 @@ This README provides a summary of JavaScript functions and concepts covered in a
 - Exported functions using the `export default` syntax.
 - Utilized array methods like `map`, `filter`, `reduce`, and set methods like `has` and `startsWith`.
 - Demonstrated error handling using `throw new Error` for specific conditions.
-
-Feel free to explore these functions and concepts in your JavaScript projects!
 
